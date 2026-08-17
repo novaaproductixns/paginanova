@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Productions</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Pantalla de Intro / Preloader a pantalla completa -->
+    <div id="intro-loader">
+        <video id="intro-video" autoplay muted playsinline preload="auto">
+            <source src="animaciones/kosmoapertura.mp4" type="video/mp4">
+            <source src="kosmoapertura.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="constellation"></div>
+
+
+    <header>
+        <div id="scroll-progress-bar" class="scroll-progress-bar"></div>
+
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+                <img src="imagenes/logo.png" alt="Nova Productions">
+            </a>
+
+            <ul class="menu">
+
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#algunostrabajos">Algunos Trabajos</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#departamentos">Departamentos</a></li>
+                <li><a href="#arcade-carousel-section">Arcade</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" class="login-link">Iniciar sesión</a></li>
+                <li class="admin-item" hidden>
+                    <button type="button" class="admin-btn">
+                        <span> ⚙ Administrar</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="admin-menu" hidden>
+                        <button type="button" class="admin-menu-item" id="new-post">
+                            Nueva publicación
+                        </button>
+                        <button type="button" class="admin-menu-item" id="stats">
+                            Estadísticas
+                        </button>
+                        <button type="button" class="admin-menu-item" id="notifications">
+                            Notificaciones
+                        </button>
+                        <button type="button" class="admin-menu-item" id="archive">
+                            Archivo
+                        </button>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="login-panel" id="loginPanel">
+                <div class="login-panel-content">
+                    <h3>Iniciar sesión</h3>
+                    <p>Acceso únicamente para el equipo Nova</p>
+                    <div id="login-message" class="login-message" aria-live="polite"></div>
+                    <button type="button" class="google-btn">
+                        <i class="fa-brands fa-google"></i>
+                        Iniciar con Google
+                    </button>
+                </div>
+            </div>
+
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <section class="hero" id="inicio">
+
+        <img src="imagenes/portada.jpg" class="hero-img" alt="Portada">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Creando marcas que permanecen</h1>
+
+            <p>
+                Fotografía profesional, producción audiovisual y contenido
+                creativo para personas, marcas y empresas.
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="about" id="nosotros">
+
+        <div class="container">
+
+            <div class="about-kosmo">
+                <div class="kosmo-saludando-wrapper">
+                    <video id="kosmo-saludando-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="auto"
+                        style="display: none;">
+                        <source src="animaciones/kosmosaludando.mp4" type="video/mp4">
+                    </video>
+                    <canvas id="kosmo-saludando-canvas"></canvas>
+                    <div class="kosmo-saludo-badge">
+                        <span class="kosmo-badge-tag">👋 ¡Hola! Soy Kosmo</span>
+                        <p>Tu explorador en Nova Productions. ¡Nos apasiona hacer volar tus ideas al siguiente nivel!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text">
+
+                <span>Sobre Nosotros</span>
+
+                <h2>Creamos experiencias visuales únicas</h2>
+
+                <p>
+
+                    Somos un equipo apasionado por la fotografía, el video y el
+                    diseño. Nuestro objetivo es convertir cada momento en una
+                    historia inolvidable mediante imágenes de alta calidad.
+
+                </p>
+
+                <p>
+
+                    Trabajamos con personas, emprendimientos y empresas para
+                    crear contenido visual que impacte y conecte con el público.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="services" id="servicios">
+
+        <div class="title">
+
+            <span>Nuestros Servicios</span>
+
+            <h2>Lo que hacemos</h2>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-camera"></i>
+
+                <h3>Fotografía</h3>
+
+                <p>
+
+                    Sesiones personales, eventos, productos, marcas y fotografía
+                    profesional.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-video"></i>
+
+                <h3>Producción Audiovisual</h3>
+
+                <p>
+
+                    Vídeos corporativos, videoclips, reels y contenido para
+                    redes sociales.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+                <h3>Diseño</h3>
+
+                <p>
+
+                    Diseño de identidad visual, piezas publicitarias y contenido
+                    digital.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="algunostrabajos" id="algunostrabajos">
+
+        <div class="title">
+
+            <h2>Algunos de nuestros trabajos</h2>
+
+        </div>
+
+        <div class="carousel">
+
+            <button type="button" class="carousel-btn prev" aria-label="Anterior">&#10094;</button>
+
+            <div class="slider">
+
+            </div>
+
+            <button type="button" class="carousel-btn next" aria-label="Siguiente">&#10095;</button>
+
+        </div>
+
+    </section>
+
+
+    <section class="team" id="equipo">
+
+        <div class="title">
+
+            <span>Equipo</span>
+
+            <h2>Personas que hacen posible cada proyecto</h2>
+
+        </div>
+
+        <div class="team-container">
+
+            <div class="member">
+
+                <img src="imagenes/1.jpg" alt="Integrante 1">
+
+                <h3>Alejandra Arias</h3>
+
+                <p>Marketing</p>
+
+                <a href="https://alejandraariass.github.io/portafolioweb/" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+            <div class="member">
+
+                <img src="imagenes/2.jpg" alt="Integrante 2">
+
+                <h3>Sophia Venegas</h3>
+
+                <p>Fotografía</p>
+
+                <a href="https://sophiavenegas30-crypto.github.io/portafolioweb/" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+            <div class="member">
+
+                <img src="imagenes/3.jpg" alt="Integrante 3">
+
+                <h3>Sarah Rozo</h3>
+
+                <p>Programación</p>
+
+                <a href="portafolios/sarah.html" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+            <div class="member">
+
+                <img src="imagenes/4.jpg" alt="Integrante 4">
+
+                <h3>Daniel Bello</h3>
+
+                <p>Diseño</p>
+
+                <a href="https://danisbellx.github.io/Portafolio-danielbello/" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+            <div class="member">
+
+                <img src="imagenes/5.jpg" alt="Integrante 5">
+
+                <h3>Brayan Ocampo</h3>
+
+                <p>Programación</p>
+
+                <a href="https://brayanocamposena-collab.github.io/mi-pagina-wb/" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+            <div class="member">
+
+                <img src="imagenes/6.jpg" alt="Integrante 6">
+
+                <h3>Andrés Gómez</h3>
+
+                <p>Sonido</p>
+
+                <a href="https://michaelgcastellanos-lab.github.io/portafolio/" class="btn">
+                    Ver Portafolio
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="departments" id="departamentos">
+
+        <div class="title">
+
+            <span>Departamentos</span>
+
+            <h2>¿Qué hace cada departamento?</h2>
+
+        </div>
+
+        <div class="departments-grid">
+
+            <div class="department-card">
+                <img src="imagenes/marketing.jpeg" alt="Departamento de Marketing y Redes">
+                <h3>Marketing y Redes</h3>
+                <p>Diseñamos estrategias de contenido, gestión de redes y campañas que potencian la presencia y conexión de cada marca.</p>
+            </div>
+
+            <div class="department-card">
+                <img src="imagenes/diseño.jpeg" alt="Departamento de diseño">
+                <h3>Diseño</h3>
+                <p>Creamos identidades visuales, piezas gráficas y conceptos creativos que transmiten la esencia de cada proyecto.</p>
+            </div>
+
+            <div class="department-card">
+                <img src="imagenes/audiovisual.jpeg" alt="Departamento de producción">
+                <h3>Audiovisual</h3>
+                <p>Desarrollamos producciones de video, edición y storytelling visual para dar vida a ideas con impacto y emoción.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SECCIÓN ARCADE STATION (3 JUEGOS) -->
+    <section id="arcade-carousel-section" class="arcade-section">
+        <div class="title">
+            <span>Zona Arcade</span>
+            <h2>NOVA ARCADE STATION</h2>
+        </div>
+        <p class="arcade-subtitle">Usa las flechas <strong style="color: var(--acento);">(← →)</strong> o los botones para cambiar de juego y presiona <strong style="color: var(--acento);">INICIAR</strong>.</p>
+        
+        <!-- Contenedor del Carrusel -->
+        <div id="arcade-carousel-wrapper">
+            
+            <!-- Indicador visual del juego actual -->
+            <div id="carousel-indicator">
+                1 / 3: KOSMO ESCAPE
+            </div>
+
+            <!-- Botones de Navegación del Carrusel -->
+            <button type="button" id="arcade-prev-btn" class="arcade-nav-btn prev-btn" aria-label="Juego anterior">&#10094;</button>
+            <button type="button" id="arcade-next-btn" class="arcade-nav-btn next-btn" aria-label="Juego siguiente">&#10095;</button>
+
+            <div id="game-slider-track">
+                
+                <!-- JUEGO 1: KOSMO ESCAPE -->
+                <div class="game-slide">
+                    <canvas id="canvas-escape" width="520" height="600"></canvas>
+                    <div class="overlay-game" id="overlay-0">
+                        <h3>KOSMO ESCAPE</h3>
+                        <p>Muévete con flechas (← →) y esquiva asteroides</p>
+                        <button type="button" class="btn-start-game" data-game="0">JUGAR ESCAPE</button>
+                    </div>
+                </div>
+
+                <!-- JUEGO 2: KOSMO MAZE -->
+                <div class="game-slide">
+                    <canvas id="canvas-maze" width="520" height="600"></canvas>
+                    <div class="overlay-game" id="overlay-2">
+                        <h3>KOSMO MAZE</h3>
+                        <p>Navega con flechas (← → ↑ ↓) por el laberinto</p>
+                        <button type="button" class="btn-start-game" data-game="2">JUGAR MAZE</button>
+                    </div>
+                </div>
+
+                <!-- JUEGO 4: KOSMO ORBIT -->
+                <div class="game-slide">
+                    <canvas id="canvas-orbit" width="520" height="600"></canvas>
+                    <div class="overlay-game" id="overlay-3">
+                        <h3>KOSMO ORBIT</h3>
+                        <p>Presiona ESPACIO para saltar entre órbitas</p>
+                        <button type="button" class="btn-start-game" data-game="3">JUGAR ORBIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE GAMEPAD CONTROLS -->
+        <div id="mobile-gamepad" class="mobile-gamepad">
+            <div class="dpad">
+                <button type="button" class="pad-btn up" id="btn-up" aria-label="Arriba"><i class="fa-solid fa-caret-up"></i></button>
+                <div class="dpad-middle">
+                    <button type="button" class="pad-btn left" id="btn-left" aria-label="Izquierda"><i class="fa-solid fa-caret-left"></i></button>
+                    <div class="dpad-center"></div>
+                    <button type="button" class="pad-btn right" id="btn-right" aria-label="Derecha"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+                <button type="button" class="pad-btn down" id="btn-down" aria-label="Abajo"><i class="fa-solid fa-caret-down"></i></button>
+            </div>
+            <div class="action-buttons">
+                <button type="button" class="action-btn" id="btn-action">A</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <div class="title">
+            <span>Contacto</span>
+            <h2>Hablemos de tu próximo proyecto</h2>
+        </div>
+
+        <form id="contactForm">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="text" name="asunto" placeholder="Asunto" required>
+            <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
+
+            <button type="submit" id="submitContactBtn">
+                Enviar mensaje
+            </button>
+        </form>
+
+        <!-- Mensaje opcional para que sepas que se envió con éxito -->
+        <div id="formStatus" aria-live="polite" style="margin-top: 15px; font-weight: 600;"></div>
+    </section>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <p>
+
+                © 2026 Nova Productions. Todos los derechos reservados.
+
+            </p>
+
+            <div class="social">
+
+                <a href="https://www.instagram.com/novaa_productixns?igsh=cXR4MXdraDdhYTd4" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+
+                <a href="https://www.tiktok.com/@nova_productixns?_r=1&_t=ZS-98U3UUZdpXJ" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <a href="#inicio" class="top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+    <!-- ===================== -->
+<!-- MODAL NUEVA PUBLICACIÓN -->
+<!-- ===================== -->
+
+<div class="post-modal" id="postModal" hidden>
+
+    <div class="post-modal-content">
+
+        <button type="button" class="close-post-modal" aria-label="Cerrar modal">&times;</button>
+
+        <h2>Nueva publicación</h2>
+
+        <div class="post-form">
+
+            <label>Título</label>
+            <input
+                type="text"
+                id="post-title"
+                placeholder="Título de la publicación">
+
+            <label>Descripción</label>
+            <textarea
+                id="post-description"
+                rows="5"
+                placeholder="Describe la publicación"></textarea>
+
+            <label>Imagen</label>
+            <input
+                type="file"
+                id="post-image"
+                accept="image/*,video/*">
+
+            <label>Video</label>
+            <input
+                type="file"
+                id="post-video"
+                accept="image/*,video/*">
+
+            <div id="post-status" class="post-status" aria-live="polite"></div>
+            <div id="post-feedback" aria-live="polite" style="margin-top: 10px; font-weight: 600;"></div>
+
+            <button
+                type="button"
+                class="publish-btn"
+                id="publish-post">
+
+                Publicar
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== -->
+<!-- MODAL NOTIFICACIONES -->
+<!-- ===================== -->
+
+<div class="notifications-modal" id="notificationsModal" hidden>
+
+    <div class="notifications-content">
+
+        <button type="button" class="close-notifications" aria-label="Cerrar notificaciones">&times;</button>
+
+        <h2>Notificaciones</h2>
+
+        <div id="notifications-list">
+
+            <p>No hay notificaciones.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================== -->
+<!-- MODAL COMENTARIOS     -->
+<!-- ===================== -->
+
+<div class="notifications-modal" id="commentModal" hidden>
+    <div class="notifications-content">
+        <button type="button" class="close-notifications" onclick="document.getElementById('commentModal').hidden = true">&times;</button>
+        <h2>Comentarios</h2>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" id="commentAuthor" placeholder="Tu nombre" required>
+            <textarea id="commentText" rows="3" placeholder="Escribe tu comentario..." required></textarea>
+            <div id="comment-feedback" aria-live="polite" style="font-weight: 600;"></div>
+            <button type="button" id="saveCommentBtn" class="publish-btn">Publicar comentario</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== -->
+<!-- MODAL ESTADÍSTICAS    -->
+<!-- ===================== -->
+
+<div class="notifications-modal" id="statsModal" hidden>
+    <div class="notifications-content" style="max-width: 600px;">
+        <button type="button" class="close-notifications" id="closeStatsModal">&times;</button>
+        <h2>Estadísticas de la Página</h2>
+        <p style="color: rgba(247,245,255,0.7); margin-bottom: 20px;">Métricas de rendimiento de los últimos 30 días.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px;">
+            <div class="notification" style="text-align: center; padding: 20px;">
+                <span style="font-size: 0.9rem; color: #8b78ff; display: block; margin-bottom: 5px;">VISITAS (30 DÍAS)</span>
+                <strong id="stat-visits" style="font-size: 1.8rem; color: #fff;">0</strong>
+            </div>
+            <div class="notification" style="text-align: center; padding: 20px;">
+                <span style="font-size: 0.9rem; color: #4fd7ff; display: block; margin-bottom: 5px;">PUBLICACIONES</span>
+                <strong id="stat-posts" style="font-size: 1.8rem; color: #fff;">0</strong>
+            </div>
+            <div class="notification" style="text-align: center; padding: 20px;">
+                <span style="font-size: 0.9rem; color: #85ff6d; display: block; margin-bottom: 5px;">COMENTARIOS</span>
+                <strong id="stat-comments" style="font-size: 1.8rem; color: #fff;">0</strong>
+            </div>
+            <div class="notification" style="text-align: center; padding: 20px;">
+                <span style="font-size: 0.9rem; color: #ffd76d; display: block; margin-bottom: 5px;">LIKES</span>
+                <strong id="stat-likes" style="font-size: 1.8rem; color: #fff;">0</strong>
+            </div>
+        </div>
+
+        <div class="notification">
+            <strong>Resumen de Actividad</strong>
+            <p id="stat-details" style="margin-top: 5px; color: #d1d5db;">Calculando interacciones y registros en la base de datos...</p>
+        </div>
+    </div>
+</div>
+
+<!-- ===================== -->
+<!-- MODAL ARCHIVO         -->
+<!-- ===================== -->
+
+<div class="notifications-modal" id="archiveModal" hidden>
+    <div class="notifications-content" style="max-width: 650px;">
+        <button type="button" class="close-notifications" id="closeArchiveModal">&times;</button>
+        <h2>Publicaciones Archivadas</h2>
+        <p style="color: rgba(247,245,255,0.7); margin-bottom: 20px;">Estas publicaciones están archivadas y no se muestran en el carrusel principal.</p>
+
+        <div id="archive-list" style="display: flex; flex-direction: column; gap: 15px; max-height: 50vh; overflow-y: auto;">
+            <p style="color: #888;">Cargando archivo...</p>
+        </div>
+    </div>
+</div>
+
+<!-- KOSMO VOLANDO POR TODA LA PÁGINA (SCROLL CON EVASIÓN DE COLISIONES Y CHROMA KEY) -->
+<div id="kosmo-flight">
+    <video id="kosmo-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        style="display: none;">
+        <source src="animaciones/kosmovolando.mp4" type="video/mp4">
+        <source src="kosmovolando.mp4" type="video/mp4">
+    </video>
+    <canvas id="kosmo-canvas"></canvas>
+    <div id="kosmo-tooltip" class="kosmo-tooltip"></div>
+</div>
+
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>
